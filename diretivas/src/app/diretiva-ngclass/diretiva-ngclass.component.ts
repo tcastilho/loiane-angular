@@ -9,6 +9,10 @@ export class DiretivaNgclassComponent implements OnInit {
 
   meuFavorito: boolean = false;
 
+  onClick() {
+    this.meuFavorito = !this.meuFavorito;
+  }
+
   constructor() { }
 
   ngOnInit() {
