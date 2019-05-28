@@ -1,15 +1,16 @@
-<nav>
+<nav *ngIf="mostrarMenu">
   <div class="nav-wrapper">
     <a routerLink="" class="brand-logo right">Rotas Ng2</a>
     <ul id="nav-mobile" class="left hide-on-med-and-down">
       <li><a routerLink="active" routerLink="/login">Login</a></li>
       <li><a routerLink="active" routerLink="/cursos" [queryParams]="{pagina:1}">Cursos</a></li>
-      <li><a routerLink="active" [routerLink]="['curso', idCurso.value]">Curso com ID</a></li>
+      <!-- <li><a routerLink="active" [routerLink]="['curso', idCurso.value]">Curso com ID</a></li> -->
+      <li><a routerLink="active" routerLink="/alunos">Alunos</a></li>
     </ul>
   </div>
 </nav>
 <div class="container">
-  <p>Entre com o ID do curso</p>
-  <input #idCurso>
+  <!-- <p>Entre com o ID do curso</p>
+  <input #idCurso> -->
   <router-outlet></router-outlet>
 </div>
