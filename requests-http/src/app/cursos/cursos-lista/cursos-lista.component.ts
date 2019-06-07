@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Curso } from '../curso';
-import { CursosService } from '../cursos.service';
+import { Cursos2Service } from '../cursos2.service';
 import { Observable, empty, Subject, EMPTY } from 'rxjs';
 import { catchError, take, switchMap } from 'rxjs/operators';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
@@ -29,7 +29,7 @@ export class CursosListaComponent implements OnInit {
 
   constructor(
     private modalService: BsModalService,
-    private service: CursosService,
+    private service: Cursos2Service,
     private alertService: AlertModelService,
     private router: Router,
     private route: ActivatedRoute

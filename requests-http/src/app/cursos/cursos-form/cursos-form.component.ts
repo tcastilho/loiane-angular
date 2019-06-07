@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Location } from '@angular/common';
-import { CursosService } from '../cursos.service';
+import { Cursos2Service } from '../cursos2.service';
 import { AlertModelService } from 'src/app/shared/alert-model.service';
 import { ActivatedRoute } from '@angular/router';
 import { map, switchMap, concatMap, mergeMap, exhaustMap } from 'rxjs/operators';
@@ -18,7 +18,7 @@ export class CursosFormComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
-    private service: CursosService,
+    private service: Cursos2Service,
     private modal: AlertModelService,
     private location: Location,
     private route: ActivatedRoute
