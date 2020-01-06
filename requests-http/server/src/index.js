@@ -9,14 +9,14 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 const corsOptions = {
   origin: '*',
-  optionsCuccessStatus: 200
+  optionsSuccessStatus: 200
 };
 app.use(cors(corsOptions));
 
 const multipartMiddleware = multipart({ uploadDir: './uploads' });
 app.post('/upload', multipartMiddleware, (req, res) => {
   const files = req.files;
-  res.json({ message: filesv });
+  res.json({ message: files });
 })
 
 app.use((err, req, res, next) => res.json({error: err.message}));
