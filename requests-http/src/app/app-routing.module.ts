@@ -5,19 +5,23 @@ const routes: Routes = [
   {
     path: '',
     pathMatch: 'full',
-    redirectTo: 'cursos'
+    redirectTo: 'busca-reativa'
   },
   {
     path: 'cursos',
-    loadChildren: './cursos/cursos.module#CursosModule'
+    loadChildren: () => import('./cursos/cursos.module').then(m => m.CursosModule)
   },
   {
     path: 'rxjs-poc',
-    loadChildren: './unsubscribe-rxjs/unsubscribe-rxjs.module#UnsubscribeRxjsModule'
+    loadChildren: () => import('./unsubscribe-rxjs/unsubscribe-rxjs.module').then(m => m.UnsubscribeRxjsModule)
   },
   {
     path: 'upload',
-    loadChildren: './upload-file/upload-file.module#UploadFileModule'
+    loadChildren: () => import('./upload-file/upload-file.module').then(m => m.UploadFileModule)
+  },
+  {
+    path: 'busca-reativa',
+    loadChildren: () => import('./reactive-search/reactive-search.module').then(m => m.ReactiveSearchModule)
   },
 ];
 
